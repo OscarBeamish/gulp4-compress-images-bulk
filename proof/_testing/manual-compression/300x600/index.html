@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- ! Updated the below Google Ad Size before publishing ! -->
+  <meta name="ad.size" content="width=160,height=600">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+
+  <!-- Standard clickthrough setup -->
+  <script type="text/javascript" charset="utf-8">
+    var clickTag = ""
+
+    var bgExitHandler = function() {
+      window.open(window.clickTag)
+    }
+  </script>
+  <script src="main.js"></script>
+</head>
+
+<body onload='initBrand(); init();'>
+
+  <div id="main_container" class="bannerSize absolute">
+
+    <div id="main_content" class="bannerSize">
+
+      <div id="banner_content" class="absolute">
+
+        <!-- Start banner -->
+        <div class='banner' id="banner">
+          <img src="BG.jpg" class='bg' id='bg'>
+
+
+          <img src="logo.png" class='logo' id='logo'>
+
+          <div class="products" id="products">
+            <img src="product1.jpg" class='product1' id='product1'>
+            <img src="product1-title.png" class='product1-title' id='product1-title'>
+            <img src="product2.jpg" class='product2' id='product2'>
+            <img src="product2-title.png" class='product2-title' id='product2-title'>
+            <img src="product3.jpg" class='product3' id='product3'>
+            <img src="product3-title.png" class='product3-title' id='product3-title'>
+          </div>
+          <div class="legals" id='legals'></div>
+        </div>
+
+      </div>
+
+      <!-- Below "brand" Div is Required for the PS Intro and Momentum -->
+      <div id="brand" class="bannerSize absolute">
+        <img src="CTA.png" class="cta noBlur">
+        <img src="CTA-hover.png" class="cta-hover">
+      </div>
+
+      <div id="border" class="border"></div>
+
+    </div>
+
+  </div>
+
+  <!-- Exit div -->
+  <div id="default_exit">
+    <img src="CTA.png" class='cta' id='cta'>
+    <img src="CTA-hover.png" class="cta-hover">
+  </div>
+
+  <!-- Standard clickthrough -->
+
+  <script type="text/javascript" src="m_blue.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('default_exit').addEventListener('click', bgExitHandler, false)
+    document.getElementById('products').addEventListener('click', bgExitHandler, false)
+  </script>
+</body>
+
+</html>
